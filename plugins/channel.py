@@ -53,11 +53,9 @@ async def send_movie_updates(bot, file_name, file_id):
     processed_movies.add(imdb_title)
     if not poster_url or not caption:
         return
-    btn = [[
-        [InlineKeyboardButton('🔍Search Here', url=f'https://t.me/tvshowpublic')],
-        [InlineKeyboardButton('▶𝚈𝚘𝚞𝚝𝚞𝚋𝚎', url=f'https://youtube.com/@techbro-kd8yk/'),
-        [InlineKeyboardButton('🌿Cʜᴀɴɴᴇʟ👍', url=f'https://t.me/shreeganesh00')]
-    ]]
+    btn = [
+        [InlineKeyboardButton('🔍Search Here', url=f'https://t.me/tvshowpublic')]
+    ]
     reply_markup = InlineKeyboardMarkup(btn)
     movie_update_channel =await db.movies_update_channel_id()
     try:
@@ -65,5 +63,6 @@ async def send_movie_updates(bot, file_name, file_id):
     except Exception as e:
         print('Failed to send movie update. Error - ', e)
         await bot.send_message(LOG_CHANNEL, f'Failed to send movie update. Error - <code>{e}</b>')
+
 
 
