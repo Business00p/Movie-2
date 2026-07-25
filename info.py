@@ -44,7 +44,7 @@ SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/TvshowChat') #Support g
 #---------------------------------------------------------------
 IS_VERIFY = is_enabled('IS_VERIFY', True)
 #---------------------------------------------------------------
-TUTORIAL = environ.get("TUTORIAL", "")
+TUTORIAL = environ.get("TUTORIAL", "https://t.me/tvshowpubli/1773")
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://i.postimg.cc/QjDYhVZq/6223ff48-88ab-43f0-82d2-67c50b24f3e2.jpg?dl=1")
 SHORTENER_API = environ.get("SHORTENER_API", "f46f4187dd7e10bee91f805cf6214b4381ebdf45")
 SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", 'gplinks.com')
